@@ -182,7 +182,7 @@
 
         var textAnimate = eval(Jscex.compile("async", function () {
 		    var together = new Date();
-		    together.setFullYear(2022, 3, 15); 			//时间年月日
+		    together.setFullYear(2022, 3-1, 15); 			//时间年月日
 		    together.setHours(22);						//小时	
 		    together.setMinutes(16);					//分钟
 		    together.setSeconds(0);					//秒前一位
@@ -192,6 +192,7 @@
             $("#clock-box").fadeIn(500);
             while (true) {
                 timeElapse(together);
+                // timeElapse("15/03/2022 22:16:00")
                 $await(Jscex.Async.sleep(1000));
             }
         }));
